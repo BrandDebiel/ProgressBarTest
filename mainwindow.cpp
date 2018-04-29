@@ -8,9 +8,12 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->spinBox->setValue(1000);
 
-    connect(&intervalTimer, SIGNAL(timeout()), this, SLOT(changeProgressbar()));
+    m_intervalTime = 1000;
+
+    ui->spinBox->setValue(m_intervalTime);
+
+    connect(&m_intervalTimer, SIGNAL(timeout()), this, SLOT(changeProgressbar()));
     connect(ui->pushButton, SIGNAL(clicked(bool)), this, SLOT(startTheTimer()));
 }
 
@@ -34,10 +37,12 @@ void MainWindow::changeProgressbar()
 
 void MainWindow::startTheTimer()
 {
-    intervalTimer.setInterval(ui->spinBox->value());
+    m_intervalTime = ui->spinBox->value();
 
-    if(intervalTimer.isActive())
-        intervalTimer.stop();
+    m_intervalTimer.setInterval(m_intervalTime);
+
+    if(m_intervalTimer.isActive())
+        m_intervalTimer.stop();
     else
-        intervalTimer.start();
+        m_intervalTimer.start();
 }

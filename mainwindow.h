@@ -16,7 +16,8 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    QTimer intervalTimer;
+    QTimer m_intervalTimer;
+    int m_intervalTime;
 
 public slots:
     void changeProgressbar();
