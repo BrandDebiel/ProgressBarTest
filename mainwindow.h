@@ -16,12 +16,12 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    QTimer m_intervalTimer;
-    int m_intervalTime;
+    QTimer m_intervalTimer;     //Declareer timer object
+    int m_intervalTime;         //Declareer gedeelde variabele
 
 public slots:
-    void changeProgressbar();
-    void startTheTimer();
+    void changeProgressbar();   //Maak functie die kan fungeren als slot
+    void startTheTimer();       //Maak functie die kan fungeren als slot
 
 private:
     Ui::MainWindow *ui;
