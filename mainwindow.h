@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QTimer>
 
+#include "adcconverter.h"   //Voeg header file toe!!!
+
 namespace Ui {
 class MainWindow;
 }
@@ -25,6 +27,10 @@ public slots:
 
 private:
     Ui::MainWindow *ui;
+
+    /****************************************************************************************************************************************/
+    AdcConverter m_adcConverter;    //Declareer het object (m_ omdat het een member variabele is, dit is cosmetisch)
+    /****************************************************************************************************************************************/
 };
 
 #endif // MAINWINDOW_H

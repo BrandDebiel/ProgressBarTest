@@ -17,8 +17,14 @@
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <widget class="QProgressBar" name="progressBar">
+      <property name="maximum">
+       <number>1024</number>
+      </property>
       <property name="value">
        <number>0</number>
+      </property>
+      <property name="format">
+       <string>%v</string>
       </property>
      </widget>
     </item>
@@ -27,7 +33,7 @@
       <item>
        <widget class="QPushButton" name="pushButton">
         <property name="text">
-         <string>Press me like I'm hot!!</string>
+         <string>Doe meting</string>
         </property>
        </widget>
       </item>
@@ -58,7 +64,7 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
