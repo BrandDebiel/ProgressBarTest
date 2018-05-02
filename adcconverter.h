@@ -13,8 +13,8 @@ private:
 public:
     explicit AdcConverter(QObject *parent = nullptr);
 
-    bool configAdcConverter();
-    int doAdcConversie(int poortNummer);
+    bool configAdcConverter();              //Declareer functie (maak prototype)
+    int doAdcConversie(int poortNummer);    //Declareer functie (maak prototype)
 
 
 signals:
