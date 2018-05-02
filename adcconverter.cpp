@@ -24,7 +24,7 @@ int AdcConverter::doAdcConversie(int poortNummer)
     //Doe hier de ADC meting
 
     //Doe de adcConversie van pin = poortNummer en sla de waarde op in dit geval in een integer
-    int adcWaarde = 658; //In dit geval is 125 gemeten
+    int adcWaarde = 658; //In dit geval is 658 gemeten
 
 
     return adcWaarde;
